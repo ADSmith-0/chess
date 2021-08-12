@@ -14,15 +14,17 @@ export default function Chessboard({ state }:{state:ChessboardType}) {
     return (
         <section id={chessboard}>
             {y.map((y_coord:Number) => (
-                x.map((x_coord:String) => {
-                    const location:any = x_coord + y_coord.toString();
-                    //@ts-ignore
-                    return <Tile 
-                        key={location} 
-                        location={location}
-                        piece={occupiedTiles[location]}
-                    />
-                })
+                <div className={styles.row}>{
+                    x.map((x_coord:String) => {
+                        const location:any = x_coord + y_coord.toString();
+                        //@ts-ignore
+                        return <Tile 
+                            key={location} 
+                            location={location}
+                            piece={occupiedTiles[location]}
+                        />
+                    })
+                }</div>
             ))}
         </section>
     )
