@@ -1,0 +1,9 @@
+.img_piece {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: grab;
+}
+.img_piece.dragged {
+    cursor: grabbing;
+}

@@ -1,9 +1,9 @@
 import Piece from './Piece';
 import styles from '../styles/Tile.module.css';
-export default function Tile({ location, piece }:{location:String, piece:String}) {
+export default function Tile({ location, piece }:{location:string, piece:string}) {
     return (
-        <div className={styles.tile}>
+        <section className={styles.tile}>
             {!!piece && <Piece id={piece}/>}
-        </div>
+        </section>
     )
 }

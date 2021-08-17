@@ -10,11 +10,11 @@ export default function Chessboard({ state }:{state:ChessboardType}) {
         // @ts-ignore
         occupiedTiles[state[piece]] = piece;
     }
-    console.log(occupiedTiles);
     return (
         <section id={chessboard}>
             {y.map((y_coord:Number) => (
-                <div className={styles.row}>{
+                //@ts-ignore
+                <div key={y_coord} className={(y_coord % 2 === 0) ? styles.alt_row : styles.row }>{
                     x.map((x_coord:String) => {
                         const location:any = x_coord + y_coord.toString();
                         //@ts-ignore
